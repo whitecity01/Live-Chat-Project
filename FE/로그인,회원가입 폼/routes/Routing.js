@@ -12,10 +12,6 @@ const Routing = () => {
       <Routes>
         <Route path="/"   element={<Login/>} />
         <Route path="/register"  element={<Register/>} />
-        {/* <Route path="/user"  element={<Todo/>} />
-        <Route path="/friends"  element={<News/>} />
-        <Route path="/chat"  element={<Weather/>} />
-        <Route path="/option"  element={<Movie/>} /> */}
       </Routes>
     </div>
   );
