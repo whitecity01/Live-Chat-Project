@@ -4,8 +4,8 @@ import ProfilePictureUpload from './ProfilePictureUpload';
 import StatusMessage from './StatusMessage';
 import ChangePassword from './ChangePassword';
 import Nickname from './Nickname';
-import axios from 'axios';
-const serverIp = process.env.REACT_APP_SERVER_IP;
+
+import { getImage, getNickname, getStatus } from '../../../Api/profileApi';
 
 const Profile = () => {
   const [imageUrl, setImageUrl] = useState(''); // 프로필 사진 URL
@@ -17,22 +17,19 @@ const Profile = () => {
     setImageUrl(url);
   };
 
-  const fetchProfileInfo = async () => {
+  const fetchProfileInfo = async () => { // profile 들고오기
     try {
-      const res = await axios.get(`${serverIp}/chat`, {
-        headers: { "Content-Type": "application/json" }, //이건 없어도 될듯?
-        withCredentials: true,
-      });
-      const data = res.data;
-      setImageUrl(data.imageUrl);
-      setNickname(data.nickname);
-      setStatus(data.status);
-      
+      const newNickname = await getNickname(); // 비동기로 닉네임 가져오기
+      const newStatus = await getStatus();
+      const newImageUrl = await getImage();
+      setNickname(newNickname); // 닉네임 상태 업데이트
+      setStatus(newStatus);
+      setImageUrl(newImageUrl);
     } catch (error) {
       console.error('에러 발생 :', error);
     }
   };
-
+  
   useEffect(() => {
     fetchProfileInfo();
   }, []); // 컴포넌트가 마운트되면 프로필 정보를 가져옴

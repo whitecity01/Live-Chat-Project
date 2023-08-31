@@ -24,12 +24,12 @@ const ChatForm = () => {
 
   const fetchChatData = async () => {
     try {
-      const res = await axios.get(`${serverIp}/chat`, {
+      const res = await axios.get(`${serverIp}/chats`, {
         headers: { "Content-Type": "application/json" }, //이건 없어도 될듯?
         withCredentials: true,
       });
       const chats = res.body;
-      
+      console.log(chats);
       setChatData(chats);
     } catch (error) {
       console.error("에러 발생 :", error);
@@ -40,6 +40,8 @@ const ChatForm = () => {
     <div>
       <ChatAdd onUserAdded={fetchChatData} />
       <h2>대화 목록</h2>
+      {chatData ? (
+        <ul>
       {chatData.map((user) => (
         <li key={user.id}>
           <div>
@@ -51,6 +53,10 @@ const ChatForm = () => {
           </div>
         </li>
       ))}
+      </ul>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

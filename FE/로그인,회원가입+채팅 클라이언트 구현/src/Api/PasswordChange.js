@@ -5,7 +5,7 @@ const PasswordChange = async (newPassword) => {
   try {
     console.log(newPassword);
 
-    const res = await axios.post(`${serverIp}/users/login`, newPassword, {
+    const res = await axios.post(`${serverIp}/users/profile/pwChange`, newPassword, {
       headers: { "Content-Type": "application/json" },
       withCredentials: true,
     });
