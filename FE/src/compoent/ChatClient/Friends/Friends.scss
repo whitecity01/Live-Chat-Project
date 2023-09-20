@@ -1,0 +1,60 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 16px;
+}
+
+/* 이미지 스타일 */
+.img-file {
+  flex: none;
+  overflow: hidden;
+  border-radius: 9999px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 50px;
+   height:50px;
+   margin-right: 24px;
+}
+
+
+//   max-width: 100px;
+//     border-radius: 50%; /* 이미지를 원 모양으로 만듭니다. */
+//     margin-right: 16px; /* 이미지와 닉네임 사이의 간격 조절 */
+/* 닉네임 스타일 */
+p strong {
+  font-weight: bold;
+}
+
+.chat-enter {
+    margin: left 100px;; /* 오른쪽으로 이동하여 가장 오른쪽에 배치합니다. */
+  }
+/* 상태 메시지 스타일 */
+p {
+  margin: 0;
+}
+.chat-enter-container {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    //display: flex; /* Flexbox 레이아웃을 사용합니다. */
+    //justify-content: flex-end; /* 자식 요소를 오른쪽으로 정렬 */
+  }
+  
+  .chat-enter-container a {
+    display:inline-flex;
+    padding: 5px 5px;
+    background-color: #85bdf3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: #b0c6f4;
+    }
+  }

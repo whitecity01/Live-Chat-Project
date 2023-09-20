@@ -1,0 +1,47 @@
+// .profile-container {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 20px;
+//   }
+  
+//   .profile-picture {
+//     width: 150px;
+//     height: 150px;
+//     border-radius: 50%;
+//     border: 3px solid #fff;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+//     margin-bottom: 20px;
+//   }
+  
+//   .nickname {
+//     font-size: 24px;
+//     font-weight: bold;
+//     color: #333;
+//     margin-bottom: 10px;
+//   }
+  
+//   .status-message {
+//     font-size: 18px;
+//     color: #666;
+//     margin-bottom: 20px;
+//   }
+  
+//   .change-password-link {
+//     color: #007bff;
+//     text-decoration: none;
+//     font-weight: bold;
+//   }
+  
+//   .change-password-link:hover {
+//     text-decoration: underline;
+//   }
+
+
+.tw-profile-image {
+    flex: none;
+    overflow: hidden;
+    border-radius: 9999px;
+    -o-object-fit: cover;
+    object-fit: cover
+}

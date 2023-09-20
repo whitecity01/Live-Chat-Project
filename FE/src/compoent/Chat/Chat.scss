@@ -1,0 +1,75 @@
+.chat-container {
+  width: 55%;
+  max-width: 75%;
+  margin: 0 auto; /* 가운데 정렬을 위한 스타일 추가 */
+  height: 95vh;
+  padding: 20px;
+  background-color: hsl(329, 100%, 91%);
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 채팅 목록 스타일 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* 채팅 목록이 컨테이너의 남은 공간을 채우도록 설정 */
+  overflow-y: auto; /* 내용이 넘칠 경우 스크롤 표시 */
+}
+
+.chat-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: hsl(334, 41%, 93%);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-name {
+  font-weight: bold;
+  margin-right: 10px;
+  color: black;
+}
+
+/* 메시지 입력 폼 스타일 */
+.chat-form {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0; /* 아래에 고정 */
+  left: 50%; /* 가운데 정렬을 위해 왼쪽 50%로 이동 */
+  transform: translateX(-50%); /* 가운데 정렬을 위해 가로 방향으로 -50% 이동 */
+  width: 58.1%; /* 폼의 너비를 줄임 */
+  background-color: hsl(328, 57%, 95%);
+  border-radius: 10px; /* 모서리를 둥글게 만듦 */
+}
+
+.chat-input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid hsl(329, 100%, 91%);
+  border-radius: 25px;
+  outline: none;
+}
+
+.chat-submit {
+  padding: 15px 20px;
+  background-color: hsl(329, 100%, 91%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-submit:hover {
+  background-color: #0056b3;
+}
